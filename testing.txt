@@ -1,0 +1,58 @@
+GET requests:
+localhost:3000/category/1
+localhost:3000/item/search?query=בישול
+localhost:3000/items
+localhost:3000/item/2
+
+
+POST requests:
+category:
+localhost:3000/category:
+{
+    "name": "ילדים ונוער"
+}  
+
+items:
+update existing item and existing volume
+{
+    "name": "מנוי חדר כושר בסיסי",
+    "price": 300.00,
+    "categoryId": 1,
+    "volumes": [
+        {
+            "value": "10 כניסות",
+            "price": 120.00
+        }
+     ]
+}  
+
+update existing item and new volumes
+{
+    "name": "מנוי חדר כושר בסיסי",
+    "price": 300.00,
+    "categoryId": 1,
+    "volumes": [
+        {
+            "value": "10 כניסות",
+            "price": 100.00
+        },
+                {
+            "value": "5 כניסות",
+            "price": 50.00
+        }
+     ]
+}  
+
+create new item on an existing category
+{
+    "name": "מנוי חדר כושר פרימיום",
+    "price": 400.00,
+    "categoryId": 1,
+    "volumes": [
+        {
+            "value": "10 כניסות",
+            "price": 200.00
+        }
+     ]
+} 
+ 
